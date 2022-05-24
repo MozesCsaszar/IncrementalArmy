@@ -1,0 +1,179 @@
+
+<head>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+
+
+
+<body id ="body">
+    <div style="color:gold;float:left;">Gold: &nbsp<div id = "GoldText">0000</div></div>
+    <br>
+    <!--B  BUTTON FOR PAGES-->
+    <div id = "PageButtonsContainer">
+        <button class='page_button' id = "TowerPageButton" hidden>Tower</button>
+        <button class='page_button' id = "ArmyPageButton" hidden>Army</button>
+        <button class='page_button' id = "BuyCreaturePageButton">Creature</button>
+        <button class='page_button' id = "BuyWeaponPageButton" hidden>Weapon</button>
+        <button class='page_button' id = "SettingsPageButton">Settings</button>
+        <!--   A LINE TO BE UNDER THE BUTTONS-->
+        <hr style="height:3px; position: absolute; left:3 ;border-width:0;color:gray;background-color:green;width:400px;">
+    </div>
+    
+    <div id="OfflinePageContainer">
+        <div id="OfflineGreeting">Welcome back, Captain!</div>
+        <div id="OfflineInfoText"></div>
+        <button id = "ContinueFromOfflineProgress">Back to my office.</button>
+    </div>
+
+    <!-- TOWER PAGE COMPONENTS -->
+    <div id= "TowerPageContainer">
+
+        <!--   CHANGE ARMY BUTTONS-->
+        <button class='toggle_button change_army_button'>1</button>
+        <button class='toggle_button change_army_button'>2</button>
+        <button class='toggle_button change_army_button'>3</button>
+
+        <div id = 'TowerPageArmyInfo' class = 'info_text' style = 'top:150px;'>Test, Test, but what do I test? I test if this test is visible or not, thanks tests.</div>
+
+        <div id = 'TowerPageTowerInfo' class = 'info_text' style = 'top:150px;left:260px;'>Test, Test, but what do I test? I test if this test is visible or not, thanks tests.</div>
+
+        <div class='tower'>
+            <div class='tower_top3 tower_part'></div>
+            <div class='tower_top2 tower_part'></div>
+            <div class='tower_top1 tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+            <div class='tower_floor tower_part'></div>
+        </div>
+        <div id = "TowerLevelsContainer">
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+            <div class='tower_level' hidden = 'true'></div>
+        </div>
+        
+
+    </div>
+    
+    <div id = "ArmyPageContainer">
+        <!--   ARMY SELECTOR STUFF-->
+        <div id = 'ArmyPageInfo' class = 'info_text' style='left:300px; top:135px; '>ERROR</div>
+        <div style="border-left:4px solid green; height: 150px; position: absolute; left: 553px; top: 133px;"></div>
+        <div style="position:absolute;left:560px;top:135px;">Size of army: <input type="text" id='ArmySizeInput' style='width:100px;' value = 0> <button id="MaxArmySize">MAX</button></div>
+        <div style="position:absolute;left:560px;top:162px;" id = "ArmyLevelText">Army level: 100</div> <button hidden id = "ArmyLevelUpButton" style = "position:absolute;left:680px;top:160px;">Level up!</button> <div style="position:absolute;left:755px;top:162px;" id = "ArmyLevelUpCost"></div>
+        <div id = 'ArmyPagePartInfo' class = 'info_text' style='left:560; top:185px; ' hidden>ERROR</div>
+
+
+        <button class='select_army_button'>Army 1</button>
+        <button class='select_army_button'>Army 2</button>
+        <button class='select_army_button'>Army 3</button>
+
+        <br>
+
+        <div id = 'ArmyCreatureContainer' class = 'army_stuff_container' type = 'creatures' style = "margin-top:5px;">
+            &nbsp  Creature: <button id = 'CreatureSelect'>None</button>&nbsp <div class = 'CreatureAvailableNumber' style="float:left;">(∞)</div>
+        </div>
+
+        <div id = 'CreatureSelectButtonsContainer' class='select_buttons_container' hidden>
+            <button class = 'creature_select_button stuff_select_button'>None</button>
+            <button class = 'creature_select_button stuff_select_button' hidden>Human</button>
+        </div>
+
+        <div hidden class = 'army_weapon_container army_stuff_container' type = 'weapons' style = "margin-top:5px;">
+            &nbsp  Weapon I: <button class='weapon_select'>None</button> &nbsp <div class = 'WeaponAvailableNumber' style=" float:left;">(∞)</div>
+        </div>
+        <div hidden class = 'army_weapon_container army_stuff_container' type = 'weapons' style = "margin-top:5px;">
+            &nbsp Weapon II: <button class='weapon_select'>None</button> &nbsp <div class = 'WeaponAvailableNumber' style=" float:left;">(∞)</div>
+        </div>
+        <div hidden='true' class = 'army_weapon_container army_stuff_container' type = 'weapons' style = "margin-top:5px;">
+            &nbsp Weapon III: <button class='weapon_select'>None</button>&nbsp <div class = 'WeaponAvailableNumber' style=" float:left;">(∞)</div>
+        </div>
+        <div hidden='true' class = 'army_weapon_container army_stuff_container' type = 'weapons' style = "margin-top:5px;">
+            &nbsp Weapon IV: <button class='weapon_select'>None</button>&nbsp <div class = 'WeaponAvailableNumber' style=" float:left;">(∞)</div>
+        </div>
+        <div hidden='true' class = 'army_weapon_container army_stuff_container' type = 'weapons' style = "margin-top:5px;">
+            &nbsp Weapon V: <button class='weapon_select'>None</button>&nbsp <div class = 'WeaponAvailableNumber' style=" float:left;">(∞)</div>
+        </div>
+        <div hidden='true' class = 'army_weapon_container army_stuff_container' type = 'weapons' style = "margin-top:5px;">
+            &nbsp Weapon VI: <button class='weapon_select'>None</button>&nbsp <div class = 'WeaponAvailableNumber' style=" float:left;">(∞)</div>
+        </div>
+        <div hidden='true' class = 'army_weapon_container army_stuff_container' type = 'weapons' style = "margin-top:5px;">
+            &nbsp  Weapon VII: <button class='weapon_select'>None</button>&nbsp <div class = 'WeaponAvailableNumber' style=" float:left;">(∞)</div>
+        </div>
+        <div hidden='false' class = 'army_weapon_container army_stuff_container' type = 'weapons' style = "margin-top:5px;">
+            &nbsp Weapon VIII: <button class='weapon_select'>None</button>&nbsp <div class = 'WeaponAvailableNumber' style=" float:left;">(∞)</div>
+        </div>
+
+        <div id = 'WeaponSelectButtonsContainer' class='select_buttons_container' hidden>
+            <button class = 'weapon_select_button stuff_select_button'>None</button>
+            <button class = 'weapon_select_button stuff_select_button' hidden>Knife</button>
+            <button class = 'weapon_select_button stuff_select_button' hidden>Dagger</button>
+            <button class = 'weapon_select_button stuff_select_button' hidden>Longsword</button>
+        </div>
+
+    </div>
+
+    <div id = "BuyCreaturePageContainer"> 
+        <i><div id = 'BuyCreaturePageInfo' class = 'info_text' style='left:340px; top:100px; '>Some text to see what will change and the info of your soldiers. Pretty simple and effective, I hope. </div></i> 
+        <button class='toggle_button creature_buy_number' style="position:absolute;left:600px; top: 70px;">I</button>    
+        <button class='toggle_button creature_buy_number' style="position:absolute;left:638px; top: 70px">X</button>    
+        <button class='toggle_button creature_buy_number' style="position:absolute;left:676px; top: 70px">C</button>    
+        <button class='toggle_button creature_buy_number' style="position:absolute;left:714px; top: 70px">M</button>    
+                                                                                     
+        <div style='margin-top:20px;' class = 'buyer_button_div'>  &nbsp Human &nbsp<button class = 'buy_button buy_creature' id='HumanBuyButton'>Buy</button>&nbsp<div style=" float:left; margin-top: 2px;">(0)</div></div>
+    
+    </div>
+
+    <div id = "BuyWeaponPageContainer">
+        <i><div id = 'BuyWeaponPageInfo' class = 'info_text' style='left:340px; top:70pxpx; '>Some text to see what will change and the info of your soldiers. Pretty simple and effective, I hope. </div></i> 
+        <button class='toggle_button weapon_buy_number' style="position:absolute;left:600px; top: 70px;">I</button>    
+        <button class='toggle_button weapon_buy_number' style="position:absolute;left:638px; top: 70px">X</button>    
+        <button class='toggle_button weapon_buy_number' style="position:absolute;left:676px; top: 70px">C</button>    
+        <button class='toggle_button weapon_buy_number' style="position:absolute;left:714px; top: 70px">M</button>
+
+        <div style='margin-top:20px;' class = 'buyer_button_div'> Knife &nbsp<button class = 'buy_button buy_weapon' id='KnifeBuyButton'>Buy</button><div style=" float:left; margin-top: 2px;">(0)</div></div>
+        <div hidden class = 'buyer_button_div'> Dagger &nbsp<button class = 'buy_button buy_weapon' id='DaggerBuyButton'>Buy</button><div style=" float:left; margin-top: 2px;">(0)</div></div>
+        <div hidden class = 'buyer_button_div'> Longsword &nbsp<button class = 'buy_button buy_weapon' id='LongswordBuyButton'>Buy</button><div style=" float:left; margin-top: 2px;">(0)</div></div>
+    </div>
+
+    <div id = "SettingsPageContainer">
+        <button id = "SaveGameButton" style='margin-top: 20px;'>Save game</button>
+        <br>
+        <input type='file' accept=".txt" id="LoadGameButton">
+    </div>
+    
+    <script src="break_infinity.js"></script>
+    <script src="IncrementalArmy.js"></script>
+</body>
+
+
